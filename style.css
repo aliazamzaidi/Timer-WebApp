@@ -1,0 +1,13 @@
+div.jumbotron p{
+    color: green;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 5em;
+}
+
+.timerr{
+    font-size:5em;
+}
+
+button{
+    font-size:5em;
+}
