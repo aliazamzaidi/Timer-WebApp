@@ -17,9 +17,13 @@ function func(){
 setInterval(timer,1000);
 }
 
-// function stopFunc(){
-//     onpause(func);
-// }
+function stopFunc(){
+    a = 0;b = 0;c=0;
+}
+
+function stopFuncButton(){
+    setInterval(stopFunc,1);
+}
 
 // function mins(){
 //     if(a > 59){
