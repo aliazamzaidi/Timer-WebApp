@@ -1,6 +1,9 @@
 var a = 0;
 var b = 1;
 var c = 1;
+var start = document.getElementById("start");
+var stop = document.getElementById("stop");
+
 function timer(){
     document.getElementById('para1').innerHTML = a++;
     if (a>59){
@@ -13,16 +16,24 @@ function timer(){
     }
 }
 
-function func(){
-setInterval(timer,1000);
+var ci;
+start.onclick = function(){
+    a = 0; b = 1; c = 1;
+    ci = setInterval(timer,1000);
+    this.disabled = true;
 }
 
-function stopFunc(){
-    a = 0;b = 0;c=0;
+stop.onclick = function(){
+    a = 0; b = 0; c = 0;
+    clearInterval(ci);
+    document.getElementById('para1').innerHTML = 0;
+    document.getElementById('para2').innerHTML = 0;
+    document.getElementById('para3').innerHTML = 0;
+    start.disabled = false;
 }
 
 function stopFuncButton(){
-    setInterval(stopFunc,1);
+    //setInterval(stopFunc,1);
 }
 
 // function mins(){
